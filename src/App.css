@@ -38,6 +38,11 @@ nav {
   height: 80vh; 
 }
 
+.leaflet-tooltip{
+  width: 350px !important;
+  white-space: normal !important; 
+}
+
 select, option:focus {
   outline: none !important;
   box-shadow: none !important;

@@ -65,9 +65,8 @@ class App extends Component {
       {
         sel_borough: event.target.value 
       },
-      () => {
-      this.fetchSites() 
-      })
+      this.fetchSites
+      )
 
   }
 
