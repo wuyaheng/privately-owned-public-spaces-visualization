@@ -1,0 +1,90 @@
+h5 {
+  font-size: 1.3rem !important;
+  font-weight: 400 !important;
+}
+
+p {
+  text-align: justify;
+}
+
+.modal {
+  max-height: 20% !important;
+  width: 80% !important;
+  height: 20% !important;
+}
+
+.navbar-light,.navbar-light {
+  margin: 0 auto !important;
+}
+
+nav {
+  height: 50px;
+  line-height: 50px; 
+}
+
+.aboutBtn {
+  background-color: #3f88c5 !important;
+  text-transform: none !important;
+}
+
+.aboutCloseBtn {
+  background-color: #3f88c5 !important;
+}
+.nav-wrapper {
+  background-color: #3f88c5;
+}
+
+#mapid { 
+  height: 80vh; 
+}
+
+select, option:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+h5 {
+  font-family: 'Roboto', sans-serif; 
+  margin-bottom: 0.2rem !important;
+}
+
+.projectTitle {
+  font-size: 25px !important;
+}
+
+.card {
+  box-shadow: none !important;
+}
+
+.checkbox-blue[type="checkbox"].filled-in:checked+span:not(.lever):after{
+  border: 2px solid #3f88c5 !important;
+  background-color: #3f88c5 !important;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: #3f88c5 !important;
+}
+input[type=range]::-moz-range-thumb {
+  background-color: #3f88c5 !important;
+}
+input[type=range]::-ms-thumb {
+  background-color: #3f88c5 !important;
+}
+
+/***** These are to edit the thumb and the text inside the thumb *****/
+input[type=range] + .thumb {
+  background-color: #3f88c5 !important;
+}
+input[type=range] + .thumb.active .value {
+  color: #fff !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90% !important;
+  }
+  .projectTitle {
+    font-size: 20px !important;
+  }
+}
