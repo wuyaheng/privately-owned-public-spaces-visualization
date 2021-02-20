@@ -95,7 +95,7 @@ class App extends Component {
         </nav>
       <div className="container-fluid"> 
       <div className="row mt-2 mb-0"> 
-      <div className="col-md-3">
+      <div className="col-md-5">
 
       <a className="aboutBtn mt-2 waves-effect waves-light btn btn-block modal-trigger #3f88c5 text-white" href="#modal1">About the Project</a>
 
@@ -108,7 +108,7 @@ class App extends Component {
         </div> 
       </div> 
 
-      <div className="searchCard">
+      <div className="searchCard"> 
       <h6>&nbsp;<b>Choose a Borough</b></h6> 
         <SelectBoroughs results={this.state.boroughs} handleInputChange={this.handleInputChange} /> 
         <h6>&nbsp;<b>Choose a Neighborhood</b></h6> 
@@ -121,7 +121,8 @@ class App extends Component {
         <BoroughChart results={this.state.filteredSites.length > 0 ? this.state.filteredSites : this.state.sites}/> 
 
         </div> 
-          <div className="col-md-9 mb-0 pb-0">
+
+          <div className="col-md-7 mb-0 pb-0">
               <div className="card mb-0 pb-0"> 
                 <MapBox results={this.state.filteredSites.length > 0 ? this.state.filteredSites : this.state.sites}  /> 
               </div>

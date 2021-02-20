@@ -1,14 +1,12 @@
 import React from "react";
 
 function SelectNeighborhoods({ results, handleNtaChange }) {
-    console.log(results)
+    let ntaArray = Array.from(new Set(results.map((ele, i) => ele.nta))) 
     return (
         <div className="input-group mb-2">
             <select className="custom-select" id="inputGroupSelect02" onChange={handleNtaChange}>
                 <option value="All Neighborhoods" selected="selected">All Neighborhoods</option>
-                {results.map((ele, i) => (
-                    ele.nta ? <option key={i + "-el"} value={ele.nta}>{ele.nta}</option> : null
-                ))}
+                {ntaArray.map((ele, i) => ( <option key={i + "-el"} value={ele}>{ele}</option> ))}
             </select>
         </div>
     )

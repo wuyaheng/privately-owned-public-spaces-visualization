@@ -5,7 +5,7 @@ import 'chartjs-plugin-labels';
 function BoroughChart(props) {
     console.log(props.results)
 
-  const PieChart = ({ type }) => {
+  const DoughnutChart = ({ type }) => {
     const obj = {};
     const colorArray = [
         "#8d99ae",
@@ -95,7 +95,7 @@ function BoroughChart(props) {
 
   return (
         <div>
-          <PieChart type="borough_name" />
+          <DoughnutChart type="borough_name" />
         </div>
   );
 }
