@@ -1,6 +1,6 @@
 import React from "react";
 import L from "leaflet";
-
+import 'leaflet.markercluster';
 
 export default (props) => {
   React.useEffect(() => {
@@ -28,10 +28,15 @@ export default (props) => {
         }
       ).addTo(mymap);
 
+        // Create a new marker cluster group
+      var markers = L.markerClusterGroup();
 
       props.pins.forEach((pin) =>
-        L.marker([pin.latitude, pin.longitude]).addTo(mymap).bindTooltip('<b>Building Name:</b> <span>' + pin.building_name + '</span><br/><b>Address:</b> <span>' + pin.building_address_with_zip + '</span><br/><b>Hour of Access: </b><span>' + pin.hour_of_access_required + '</span><br/><b>Amenities Required: </b><span>' + pin.amenities_required + '</span>')  
-      );
+         markers.addLayer(L.marker([pin.latitude, pin.longitude]).bindTooltip('<b>Building Name:</b> <span>' + pin.building_name + '</span><br/><b>Address:</b> <span>' + pin.building_address_with_zip + '</span><br/><b>Hour of Access: </b><span>' + pin.hour_of_access_required + '</span><br/><b>Amenities Required: </b><span>' + pin.amenities_required + '</span>')  
+      ));
+
+        // Add our marker cluster layer to the map
+      mymap.addLayer(markers);
 
     }
 
