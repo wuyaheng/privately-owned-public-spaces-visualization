@@ -1,5 +1,5 @@
 import React from "react";
-import { Pie } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 import 'chartjs-plugin-labels';
 
 function BoroughChart(props) {
@@ -75,7 +75,7 @@ function BoroughChart(props) {
     let entries =
       Object.entries(obj).sort((a, b) => (a[0] > b[0] ? 1 : -1)) || [];
      return (
-        <Pie
+        <Doughnut
           data={{
             labels: entries.map((x) => x[0]),
             datasets: [
