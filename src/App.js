@@ -126,16 +126,15 @@ class App extends Component {
               <div className="card mb-0 pb-0"> 
                 <MapBox results={this.state.filteredSites.length > 0 ? this.state.filteredSites : this.state.sites}  /> 
               </div>
+          
+              <p className="mr-1 justify-content-end text-right">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/City-Government/Privately-Owned-Public-Spaces-POPS-/rvih-nhyn">NYC OpenData  </a></p>
+           
             </div> 
         </div>
-        <div className="row justify-content-end mt-0 pt-0">
-          <p className="mr-4">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/City-Government/Privately-Owned-Public-Spaces-POPS-/rvih-nhyn">NYC OpenData  </a></p>
-        </div>
-
        </div> 
       </>
     )
   }
 }
 
-export default App;
+export default App; 
