@@ -1,7 +1,7 @@
 import React from "react";
 
 function SelectNeighborhoods({ results, handleNtaChange }) {
-    let ntaArray = Array.from(new Set(results.map((ele, i) => ele.nta))) 
+    let ntaArray = Array.from(new Set(results.map((ele, i) => ele.nta))).sort()
     return (
         <div className="input-group mb-2">
             <select className="custom-select" id="inputGroupSelect02" onChange={handleNtaChange}>
