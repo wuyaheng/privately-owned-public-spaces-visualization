@@ -23,7 +23,7 @@ nav {
 }
 
 canvas {
-  height: 370px !important;
+  height: 360px !important;
 }
 
 .aboutBtn {
@@ -39,7 +39,7 @@ canvas {
 }
 
 #mapid { 
-  height: 80vh; 
+  height: 85vh; 
 }
 
 .leaflet-tooltip{
