@@ -101,7 +101,7 @@ class App extends Component {
 
       <div id="modal1" className="modal">
         <div className="modal-content pb-0 mb-0"> 
-          <p>Privately owned public spaces, also known by the acronym POPS, are outdoor and indoor spaces provided for public enjoyment by private owners in exchange for bonus floor area or waivers, an incentive first introduced into New York City’s zoning regulations in 1961. This database contains detailed information about each privately owned public space in New York City.</p>
+          <p>Privately owned public spaces are outdoor and indoor spaces provided for public enjoyment by private owners in exchange for bonus floor area or waivers, an incentive first introduced into New York City’s zoning regulations in 1961. This database contains detailed information about each privately owned public space in New York City (NYC OpenData).</p> 
           <div className="modal-footer mb-0 pb-0">
           <a href="#!" className="aboutCloseBtn modal-close waves-effect waves-green btn text-white #3f88c5">Close</a>
         </div>
