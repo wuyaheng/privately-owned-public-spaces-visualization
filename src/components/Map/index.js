@@ -32,8 +32,9 @@ export default (props) => {
       var markers = L.markerClusterGroup();
 
       props.pins.forEach((pin) =>
+         pin.building_name ? 
          markers.addLayer(L.marker([pin.latitude, pin.longitude]).bindTooltip('<b>Building Name:</b> <span>' + pin.building_name + '</span><br/><b>Address:</b> <span>' + pin.building_address_with_zip + '</span><br/><b>Hour of Access: </b><span>' + pin.hour_of_access_required + '</span><br/><b>Amenities Required: </b><span>' + pin.amenities_required + '</span>')  
-      ));
+      ) : null );
 
         // Add our marker cluster layer to the map
       mymap.addLayer(markers);
