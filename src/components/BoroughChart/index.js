@@ -8,11 +8,11 @@ function BoroughChart(props) {
   const PieChart = ({ type }) => {
     const obj = {};
     const colorArray = [
+        "#8d99ae",
         "#bac7be",
         "#a0ced9",
-        "#f5cb5c",
         "#cc8b86",
-        "#8d99ae"
+        "#f5cb5c"
       ];
 
     let options = {
