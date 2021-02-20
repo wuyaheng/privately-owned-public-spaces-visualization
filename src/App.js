@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import MapBox from "./components/MapBox/index"
 import SelectBoroughs from "./components/SelectBoroughs/index"; 
 import SelectNeighborhoods from "./components/SelectNeighborhoods/index";
+import BoroughChart from "./components/BoroughChart/index";
 import './App.css';
 import axios from "axios"
-
 
 const ALLBOROUGHS = "All Boroughs" 
 
@@ -23,8 +23,9 @@ class App extends Component {
       {
         sel_borough: ALLBOROUGHS,
       },
-        this.fetchSites
-    );
+      () => { 
+        this.fetchSites()
+      });
     this.fetchBoroughs();
   } 
 
@@ -65,14 +66,14 @@ class App extends Component {
       {
         sel_borough: event.target.value 
       },
-      this.fetchSites
-      )
-
+      () => {
+        this.fetchSites()
+      })
   }
 
-  handleNtaChange = (event) => {
-    const sel_neighborhood = event.target.value;
-    const filteredPlaces = this.state.sites.filter(ele => {
+  handleNtaChange = (event) => { 
+    let sel_neighborhood = event.target.value;
+    let filteredPlaces = this.state.sites.filter(ele => {
       return ele.nta === sel_neighborhood
     })
     this.setState(
@@ -92,10 +93,7 @@ class App extends Component {
         <nav className="nav-wrapper">
           <p className="center projectTitle p-0 text-white">Privately Owned Public Spaces</p>
         </nav>
-  
-   
-      <div className="container-fluid">
-
+      <div className="container-fluid"> 
       <div className="row mt-2 mb-0"> 
       <div className="col-md-3">
 
@@ -108,8 +106,7 @@ class App extends Component {
           <a href="#!" className="aboutCloseBtn modal-close waves-effect waves-green btn text-white #3f88c5">Close</a>
         </div>
         </div> 
-
-      </div>
+      </div> 
 
       <div className="searchCard">
       <h6>&nbsp;<b>Choose a Borough</b></h6> 
@@ -121,13 +118,14 @@ class App extends Component {
         }
         </div>
 
+        <BoroughChart results={this.state.filteredSites.length > 0 ? this.state.filteredSites : this.state.sites}/> 
 
         </div> 
           <div className="col-md-9 mb-0 pb-0">
               <div className="card mb-0 pb-0"> 
                 <MapBox results={this.state.filteredSites.length > 0 ? this.state.filteredSites : this.state.sites}  /> 
               </div>
-            </div>
+            </div> 
         </div>
         <div className="row justify-content-end mt-0 pt-0">
           <p className="mr-4">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/City-Government/Privately-Owned-Public-Spaces-POPS-/rvih-nhyn">NYC OpenData  </a></p>
