@@ -31,9 +31,11 @@ export default (props) => {
         // Create a new marker cluster group
       var markers = L.markerClusterGroup();
 
+      var fixUndefined = (item) => (typeof (item) !== 'undefined' ? item : 'Unknown'); 
+
       props.pins.forEach((pin) =>
          (pin.building_name || pin.building_address_with_zip || pin.hour_of_access_required || pin.amenities_required) ? 
-         markers.addLayer(L.marker([pin.latitude, pin.longitude]).bindTooltip('<b>Building Name:</b> <span>' + pin.building_name + '</span><br/><b>Address:</b> <span>' + pin.building_address_with_zip + '</span><br/><b>Hour of Access: </b><span>' + pin.hour_of_access_required + '</span><br/><b>Amenities Required: </b><span>' + pin.amenities_required + '</span>')  
+         markers.addLayer(L.marker([pin.latitude, pin.longitude]).bindTooltip('<b>Building Name:</b> <span>' + fixUndefined(pin.building_name) + '</span><br/><b>Address:</b> <span>' + fixUndefined(pin.building_address_with_zip) + '</span><br/><b>Hour of Access: </b><span>' + fixUndefined(pin.hour_of_access_required) + '</span><br/><b>Amenities Required: </b><span>' + fixUndefined(pin.amenities_required) + '</span>')  
       ) : null );
 
         // Add our marker cluster layer to the map
